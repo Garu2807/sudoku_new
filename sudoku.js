@@ -4,20 +4,21 @@
  * Договорись со своей командой, в каком формате возвращать этот результат.
  */
 
-// const String =
-//   '1-58-2----9--764-52--4--819-19--73-6762-83-9-----61-5---76---3-43--2-5-16--3-89--';
+const String =
+  '1-58-2----9--764-52--4--819-19--73-6762-83-9-----61-5---76---3-43--2-5-16--3-89--';
 
 function solve(boardString) {
   // переводим строку во вложенный массив
-   const arr = [];
-   let step = boardString.length ** (1 / 2);
-   // arr.map(el => el.push() )
-   for (let i = 0; i < boardString.length; i += step) {
-     arr.push([boardString.slice(i, i + step)])
-   }
+  const arr = [];
+  let step = boardString.length ** (1 / 2);
+  let boardStringArr = [...boardString];
+  for (let i = 0; i < boardStringArr.length; i += step) {
+    arr.push(boardStringArr.slice(i, i + step));
+  }
 
- }
- // solve(String);
+// 
+}
+solve(String);
 
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции solve.
