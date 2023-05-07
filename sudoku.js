@@ -26,6 +26,7 @@ function solve(boardString) {
         }
       }
     }
+    //Проверка
     // если все ячейки заполнены
     return null;
   };
