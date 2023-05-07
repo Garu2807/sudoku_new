@@ -3,14 +3,14 @@
  * Возвращает игровое поле после попытки его решить.
  * Договорись со своей командой, в каком формате возвращать этот результат.
  */
-let input = '1-58-2----9--764-52--4--819-19--73-6762-83-9-----61-5---76---3-43--2-5-16--3-89--';
+// const input = '1-58-2----9--764-52--4--819-19--73-6762-83-9-----61-5---76---3-43--2-5-16--3-89--'
 
 function solve(boardString) {
   // step =  шаг-длина подмассива (r строка)
   // boxSize - размер блока 3*3
   let size = Math.sqrt(boardString.length);
   let boxSize = Math.sqrt(size);
-  console.log('size', size, 'boxSize', boxSize);
+  // console.log('size', size, 'boxSize', boxSize);
 
   // преобразование строки во вложенный массив
   const board = [];
@@ -18,7 +18,7 @@ function solve(boardString) {
   for (let i = 0; i < boardStringArr.length; i += size) {
     board.push(boardStringArr.slice(i, i + size));
   }
-  console.table(board);
+  // console.table(board);
 
   // ищем пустые ячейки, r = строка, c = колонна
   const findEmpty = (board) => {
@@ -72,7 +72,6 @@ function solve(boardString) {
     return true;
   };
 
-
   // создание рекурсивной функции, которая подставляет числа 1-9 в пустые ячейки
   function solveRekursia() {
     const currPos = findEmpty(board);
@@ -112,21 +111,23 @@ function solve(boardString) {
   return board;
 }
 
-// console.table(solve(input));
-
+// console.log(solve(input));
+// console.log(solve());
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции solve.
  * Возвращает булевое значение — решено это игровое поле или нет.
  */
-function isSolved(board) {}
+function isSolved(board) {
 
+}
+// console.log(isSolved(solve(input)));
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции solve.
  * Возвращает строку с игровым полем для последующего вывода в консоль.
  * Подумай, как симпатичнее сформировать эту строку.
  */
 function prettyBoard(board) {
-  // * Используйте console.table, чтобы увидеть судоку в виде аккуратной таблицы.
+
 }
 
 // Экспортировать функции для использования в другом файле (например, readAndSolve.js).
