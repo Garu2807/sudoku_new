@@ -118,7 +118,13 @@ function solve(boardString) {
  * Возвращает булевое значение — решено это игровое поле или нет.
  */
 function isSolved(board) {
-
+  const str = board.flat().join('');
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] !== '-') {
+      return true;
+    }
+    return false;
+  }
 }
 // console.log(isSolved(solve(input)));
 /**
