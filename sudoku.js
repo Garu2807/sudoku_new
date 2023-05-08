@@ -133,7 +133,7 @@ function isSolved(board) {
  * Подумай, как симпатичнее сформировать эту строку.
  */
 function prettyBoard(board) {
-
+  return console.table(board);
 }
 
 // Экспортировать функции для использования в другом файле (например, readAndSolve.js).
